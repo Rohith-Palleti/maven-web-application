@@ -16,4 +16,4 @@ steps:
 - script: |
     apt update
     apt install default-jdk maven
-    package
+    mvn package
