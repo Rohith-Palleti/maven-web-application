@@ -17,3 +17,12 @@ steps:
     apt update
     apt install default-jdk maven
     mvn package
+
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'drop'
+    publishLocation: 'Container'
+
+
+
